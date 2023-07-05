@@ -1,3 +1,2 @@
 #!/bin/bash
-#!/bin/bash
-echo -n ., ..; find . ! -path . -maxdepth 1 -type d -printf ", %f/" | sort -V; find . ! -path . -maxdepth 1 -type f -printf ", %f" | sort -V; echo
+ls -1p --group-directories-first | tr '\n' ',' | sed 's/,$/\n/'
